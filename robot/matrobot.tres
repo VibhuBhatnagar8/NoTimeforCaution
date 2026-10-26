@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ds4p1aekdc7at"]
+
+[resource]
+shading_mode = 2
+diffuse_mode = 3
+albedo_color = Color(0.75420964, 0.6479923, 1.540184e-06, 1)
+roughness = 0.5
+emission = Color(0.78758013, 0.8658148, 3.85046e-07, 1)
+emission_energy_multiplier = 0.16

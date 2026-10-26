@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ceyin1h1qvhmt"
+path="res://.godot/imported/cartoony explosion.mp3-29974489a0298be91109e02019d37f70.mp3str"
+
+[deps]
+
+source_file="res://cartoony explosion.mp3"
+dest_files=["res://.godot/imported/cartoony explosion.mp3-29974489a0298be91109e02019d37f70.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

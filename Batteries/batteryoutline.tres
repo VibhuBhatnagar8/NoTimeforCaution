@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://xfho1l110kle"]
+
+[ext_resource type="Shader" uid="uid://i0qldjs5xud5" path="res://Batteries/batteryshade.gdshader" id="1_1mdab"]
+[ext_resource type="Shader" uid="uid://dddlewyk8amc7" path="res://Batteries/batteryoutline.gdshader" id="1_4jhrf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_facbu"]
+render_priority = 0
+shader = ExtResource("1_1mdab")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_thickness = 0.01
+
+[resource]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_facbu")
+shader = ExtResource("1_4jhrf")
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/outline_thickness = 0.005

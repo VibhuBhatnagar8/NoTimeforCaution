@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dbp1yr4exu1rr"
+path="res://.godot/imported/Lego city undercover.wav-4df9fc3f287d03a14b48230a9424967b.sample"
+
+[deps]
+
+source_file="res://Sounds/Lego city undercover.wav"
+dest_files=["res://.godot/imported/Lego city undercover.wav-4df9fc3f287d03a14b48230a9424967b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b4gv2v8c0dld2"]
+
+[ext_resource type="Shader" uid="uid://cjysk8jdbij85" path="res://Batteries/batteries.gdshader" id="1_o32jg"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_o32jg")

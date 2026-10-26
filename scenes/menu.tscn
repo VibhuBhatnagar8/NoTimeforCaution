@@ -1,0 +1,221 @@
+[gd_scene format=3 uid="uid://dl1h3njha8snh"]
+
+[ext_resource type="Script" uid="uid://csqru3wo4cy1i" path="res://scenes/menu.gd" id="1_i6lef"]
+[ext_resource type="Texture2D" uid="uid://ccvpqrcah1d53" path="res://Sounds/Screenshot 2026-10-26 020220.png" id="1_mhnvy"]
+[ext_resource type="FontFile" uid="uid://davxb5jfkfwsg" path="res://PeaberryDoublespace.otf" id="2_4ytvr"]
+[ext_resource type="Script" uid="uid://8s32fcrtxxxf" path="res://scenes/label.gd" id="3_g3eks"]
+[ext_resource type="AudioStream" uid="uid://bm2wkcuem0e6w" path="res://Sounds/spark.wav" id="4_13sgg"]
+[ext_resource type="Texture2D" uid="uid://b1cc6fs3lluau" path="res://Sounds/bomb.png" id="4_v86rl"]
+[ext_resource type="Script" uid="uid://c41iaiytqmbu5" path="res://scenes/button_3.gd" id="5_4ytvr"]
+[ext_resource type="AudioStream" uid="uid://dxxa0frs024l2" path="res://Sounds/battery collect.wav" id="5_i6lef"]
+[ext_resource type="Script" uid="uid://beswbgad4wajm" path="res://scenes/button_2.gd" id="6_g3eks"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g6vsx"]
+texture = ExtResource("1_mhnvy")
+
+[sub_resource type="Animation" id="Animation_g3eks"]
+resource_name = "RESET"
+length = 2.0333333
+loop_mode = 2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(592.999, -0.25, 0, 0.25, 0, 592.999, -0.33888888, 0, 0, 0),
+"times": PackedFloat32Array(0, 2.0333333)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(100, -0.25, 0, 0.25, 0, 200, -0.33888888, -16.666666, 0, 0),
+"times": PackedFloat32Array(0, 2.0333333)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Bomb:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Bomb:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v86rl"]
+_data = {
+&"RESET": SubResource("Animation_g3eks")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v50eb"]
+bg_color = Color(1, 0.76862746, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 6
+border_color = Color(0.2, 0.105882354, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.6627451, 0.5568628, 0, 1)
+shadow_size = 3
+shadow_offset = Vector2(10, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tfrrd"]
+bg_color = Color(1, 0.91764706, 0, 1)
+border_color = Color(0.35805812, 0.16747704, 1.6845763e-07, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k86wo"]
+bg_color = Color(1, 0.91764706, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Menu" type="Node2D" unique_id=602381807]
+script = ExtResource("1_i6lef")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2107116119]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=936203653]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=945964523]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_g6vsx")
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=313667647]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -367.00098
+offset_top = -440.0
+offset_right = 367.00122
+offset_bottom = -222.99927
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.7647059, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.14901961, 0.0627451, 0, 1)
+theme_override_colors/font_outline_color = Color(0.14901961, 0.0627451, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/outline_size = 9
+theme_override_constants/shadow_outline_size = 6
+theme_override_fonts/font = ExtResource("2_4ytvr")
+theme_override_font_sizes/font_size = 100
+text = "  No Time 
+for Caution"
+script = ExtResource("3_g3eks")
+
+[node name="Bomb" type="Sprite2D" parent="CanvasLayer/Control/Label" unique_id=1128541624]
+position = Vector2(658.0011, 36.500336)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_v86rl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/Label" unique_id=328758236]
+libraries/ = SubResource("AnimationLibrary_v86rl")
+autoplay = &"RESET"
+
+[node name="Button3" type="Button" parent="CanvasLayer/Control" unique_id=1162447837]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.5
+offset_top = 220.0
+offset_right = 256.5
+offset_bottom = 334.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.2, 0.105882354, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_4ytvr")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_v50eb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tfrrd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k86wo")
+text = "Start Game"
+script = ExtResource("5_4ytvr")
+
+[node name="Button2" type="Button" parent="CanvasLayer/Control" unique_id=340954823]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.5
+offset_top = -160.0
+offset_right = 256.5
+offset_bottom = -47.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.2, 0.105882354, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_4ytvr")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_v50eb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tfrrd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k86wo")
+text = "Exit"
+script = ExtResource("6_g3eks")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=339797269]
+unique_name_in_owner = true
+stream = ExtResource("5_i6lef")
+volume_db = -10.0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=1158990556]
+unique_name_in_owner = true
+stream = ExtResource("4_13sgg")
+volume_db = -10.0
+
+[connection signal="pressed" from="CanvasLayer/Control/Button3" to="CanvasLayer/Control/Button3" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Button2" to="CanvasLayer/Control/Button2" method="_on_pressed"]
